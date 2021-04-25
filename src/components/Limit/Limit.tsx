@@ -1,4 +1,5 @@
 import React from "react";
+import { Form } from "../Form/Form.styled";
 
 interface LimitProps {
   limit: number;
@@ -10,7 +11,7 @@ const LIMIT_OPTIONS = [10, 15, 20];
 
 export const Limit: React.FC<LimitProps> = ({ limit, onLimit, className }) => {
   return (
-    <form className={className}>
+    <Form className={className}>
       <label htmlFor="limit">Number of transactions:</label>
       <select
         name="limit"
@@ -24,6 +25,6 @@ export const Limit: React.FC<LimitProps> = ({ limit, onLimit, className }) => {
           </option>
         ))}
       </select>
-    </form>
+    </Form>
   );
 };

@@ -25,24 +25,27 @@ export const Transactions: React.FC<TransactionsProps> = ({
 
   return (
     <>
-      <Sort sort={sort} onSort={setSort} />
-      <Limit limit={limit} onLimit={setLimit} />
+      <S.Title>Transactions</S.Title>
+      <S.Filtering>
+        <Sort sort={sort} onSort={setSort} />
+        <Limit limit={limit} onLimit={setLimit} />
+      </S.Filtering>
       <S.Transactions className={className}>
-        <ol>
+        <S.TransList>
           {sortedTrans.map(
             ({ description, category_title, amount, id, date }) => (
-              <li key={id}>
-                <Transaction
+              <S.TransListItem key={id}>
+                <S.Trans
                   description={description}
                   date={date}
                   category={category_title}
                   value={amount.value}
                   currency={amount.currency_iso}
                 />
-              </li>
+              </S.TransListItem>
             )
           )}
-        </ol>
+        </S.TransList>
       </S.Transactions>
     </>
   );

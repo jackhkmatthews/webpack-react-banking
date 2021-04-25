@@ -16,4 +16,7 @@ export const Page = styled.div`
     margin: 0 auto;
     max-width: 1300px;
   }
+
+  /* TODO(jack.matthews): move to more appropriate place */
+  font-family: Helvetica;
 `;

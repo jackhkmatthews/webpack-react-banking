@@ -20,6 +20,8 @@ const App = () => {
       {status === FetchStatus.FETCHING && <p>Loading...</p>}
       {status === FetchStatus.FETCHED && (
         <>
+          <h1>{provider.description}</h1>
+          <h2>Account details</h2>
           <S.TopAccountCard
             amount={balance.amount}
             currency={balance.currency_iso}
@@ -30,6 +32,9 @@ const App = () => {
           />
           <Transactions transactions={transactions} />
         </>
+      )}
+      {status === FetchStatus.ERROR && (
+        <p>Error fetching data. Please try again</p>
       )}
     </Page>
   );

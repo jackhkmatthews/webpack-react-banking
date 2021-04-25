@@ -22,13 +22,27 @@ export const AccountCard: React.FC<AccountCardProps> = ({
 }) => {
   return (
     <S.AccountCard className={className}>
-      <p>{title}</p>
-      <p>{accountNumber}</p>
-      <p>{type}</p>
-      <p>{sortCode}</p>
-      <p>
-        {amount} - {currency}
-      </p>
+      <S.Header>{title}</S.Header>
+      <S.Balance>
+        <p>
+          <small>Balance:</small>
+        </p>
+        <p>
+          {amount} - {currency}
+        </p>
+      </S.Balance>
+      <S.Number>
+        <p>
+          <small>Acc number:</small>
+        </p>
+        <p>{accountNumber}</p>
+      </S.Number>
+      <S.Sort>
+        <p>
+          <small>Sort-code:</small>
+        </p>
+        <p>{sortCode}</p>
+      </S.Sort>
     </S.AccountCard>
   );
 };

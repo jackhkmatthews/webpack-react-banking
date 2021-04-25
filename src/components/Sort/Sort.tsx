@@ -1,4 +1,5 @@
 import React from "react";
+import { Form } from "../Form/Form.styled";
 
 interface SortProps {
   sort: TransactionSort;
@@ -34,7 +35,7 @@ const SORT_OPTIONS: TransactionSortOption[] = [
 
 export const Sort: React.FC<SortProps> = ({ sort, onSort, className }) => {
   return (
-    <form className={className}>
+    <Form className={className}>
       <label htmlFor="sort">Sort transactions by:</label>
       <select
         name="sort"
@@ -48,6 +49,6 @@ export const Sort: React.FC<SortProps> = ({ sort, onSort, className }) => {
           </option>
         ))}
       </select>
-    </form>
+    </Form>
   );
 };

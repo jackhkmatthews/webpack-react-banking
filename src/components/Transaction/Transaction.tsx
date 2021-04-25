@@ -20,11 +20,16 @@ export const Transaction: React.FC<TransactionProps> = ({
 }) => {
   return (
     <S.Transaction className={className}>
-      <p>{date}</p>
-      <p>{description}</p>
-      <p>{category}</p>
-      <p>{value}</p>
-      <p>{currency}</p>
+      <S.Date>{date}</S.Date>
+      <S.Category>
+        <small>{category}</small>
+      </S.Category>
+      <S.Details>
+        <S.Vendor>{description}</S.Vendor>
+        <S.Amount green={value > 0}>
+          {value}({currency})
+        </S.Amount>
+      </S.Details>
     </S.Transaction>
   );
 };
