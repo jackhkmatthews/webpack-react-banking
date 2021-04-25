@@ -29,8 +29,9 @@ describe("This will test AccountCard", () => {
       />
     );
 
+    expect(getByText(mockBalance.amount, { exact: false })).toBeInTheDocument();
     expect(
-      getByText(`${mockBalance.amount} - ${mockBalance.currency_iso}`)
+      getByText(mockBalance.currency_iso, { exact: false })
     ).toBeInTheDocument();
     expect(getByText(mockProvider.account_number)).toBeInTheDocument();
     expect(getByText(mockProvider.title)).toBeInTheDocument();

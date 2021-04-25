@@ -27,7 +27,7 @@ export const Transaction: React.FC<TransactionProps> = ({
       <S.Details>
         <S.Vendor>{description}</S.Vendor>
         <S.Amount green={value > 0}>
-          {value}({currency})
+          {value} <small>({currency})</small>
         </S.Amount>
       </S.Details>
     </S.Transaction>

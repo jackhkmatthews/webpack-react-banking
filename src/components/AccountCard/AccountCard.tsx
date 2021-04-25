@@ -26,7 +26,7 @@ export const AccountCard: React.FC<AccountCardProps> = ({
           <small>Balance:</small>
         </p>
         <p>
-          {amount} - {currency}
+          {amount} (<small>{currency}</small>)
         </p>
       </S.Balance>
       <S.Number>
