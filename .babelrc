@@ -12,6 +12,11 @@
         "ssr": false,
         "fileName": false
       }
+    ],
+    ["@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
+      }
     ]
   ]
 }
