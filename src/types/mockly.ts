@@ -12,6 +12,11 @@ export interface MocklyAmount {
   currency_iso: string;
 }
 
+export interface MocklyBalance {
+  amount: number;
+  currency_iso: string;
+}
+
 export interface MocklyTransaction {
   id: string;
   date: string;
@@ -23,7 +28,7 @@ export interface MocklyTransaction {
 export interface MocklyAccount {
   id: any;
   provider: AccountProvider;
-  balance: any;
+  balance: MocklyBalance;
   transactions: MocklyTransaction[];
 }
 

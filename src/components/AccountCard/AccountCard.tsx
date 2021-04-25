@@ -2,19 +2,23 @@ import React from "react";
 import * as S from "./AccountCard.styled";
 
 interface AccountCardProps {
-  title: string;
   accountNumber: string;
-  type: string;
-  sortCode: string;
+  amount: number;
   className?: string;
+  currency: string;
+  sortCode: string;
+  title: string;
+  type: string;
 }
 
 export const AccountCard: React.FC<AccountCardProps> = ({
-  title,
   accountNumber,
-  type,
-  sortCode,
+  amount,
   className,
+  currency,
+  sortCode,
+  title,
+  type,
 }) => {
   return (
     <S.AccountCard className={className}>
@@ -22,6 +26,9 @@ export const AccountCard: React.FC<AccountCardProps> = ({
       <p>{accountNumber}</p>
       <p>{type}</p>
       <p>{sortCode}</p>
+      <p>
+        {amount} - {currency}
+      </p>
     </S.AccountCard>
   );
 };

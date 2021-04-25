@@ -11,7 +11,7 @@ const MOCKLY = "http://www.mocky.io/v2/5c62e7c33000004a00019b05";
 
 const App = () => {
   const {
-    data: { provider, transactions },
+    data: { provider, transactions, balance },
     status,
   }: MocklyFetchState = useFetch(MOCKLY);
 
@@ -21,6 +21,8 @@ const App = () => {
       {status === FetchStatus.FETCHED && (
         <>
           <S.TopAccountCard
+            amount={balance.amount}
+            currency={balance.currency_iso}
             title={provider.title}
             accountNumber={provider.account_number}
             type={provider.description}
