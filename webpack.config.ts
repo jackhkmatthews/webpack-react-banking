@@ -1,6 +1,5 @@
 import CopyPlugin from "copy-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import * as path from "path";
 import * as webpack from "webpack";
 import * as devsever from "webpack-dev-server";

@@ -1,9 +1,10 @@
 import React from "react";
+import * as S from "./Title.styled";
 
 interface TitleProps {
   title: string;
 }
 
 export const Title: React.FC<TitleProps> = ({ title }) => {
-  return <h1>{title}</h1>;
+  return <S.Title>{title}</S.Title>;
 };
