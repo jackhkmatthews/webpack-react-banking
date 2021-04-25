@@ -8,7 +8,6 @@ interface AccountCardProps {
   currency: string;
   sortCode: string;
   title: string;
-  type: string;
 }
 
 export const AccountCard: React.FC<AccountCardProps> = ({
@@ -18,7 +17,6 @@ export const AccountCard: React.FC<AccountCardProps> = ({
   currency,
   sortCode,
   title,
-  type,
 }) => {
   return (
     <S.AccountCard className={className}>

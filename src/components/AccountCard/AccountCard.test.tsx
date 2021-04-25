@@ -25,7 +25,6 @@ describe("This will test AccountCard", () => {
         currency={mockBalance.currency_iso}
         title={mockProvider.title}
         accountNumber={mockProvider.account_number}
-        type={mockProvider.description}
         sortCode={mockProvider.sort_code}
       />
     );
@@ -35,7 +34,6 @@ describe("This will test AccountCard", () => {
     ).toBeInTheDocument();
     expect(getByText(mockProvider.account_number)).toBeInTheDocument();
     expect(getByText(mockProvider.title)).toBeInTheDocument();
-    expect(getByText(mockProvider.description)).toBeInTheDocument();
     expect(getByText(mockProvider.sort_code)).toBeInTheDocument();
   });
 });

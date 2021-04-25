@@ -27,7 +27,6 @@ const App = () => {
             currency={balance.currency_iso}
             title={provider.title}
             accountNumber={provider.account_number}
-            type={provider.description}
             sortCode={provider.sort_code}
           />
           <Transactions transactions={transactions} />
