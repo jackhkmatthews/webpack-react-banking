@@ -7,11 +7,24 @@ export interface AccountProvider {
   description: string;
 }
 
+export interface MocklyAmount {
+  value: number;
+  currency_iso: string;
+}
+
+export interface MocklyTransaction {
+  id: string;
+  date: string;
+  description: string;
+  category_title: string;
+  amount: MocklyAmount;
+}
+
 export interface MocklyAccount {
   id: any;
   provider: AccountProvider;
   balance: any;
-  transations: any[];
+  transactions: MocklyTransaction[];
 }
 
 export interface MocklyFetchState extends FetchState {
