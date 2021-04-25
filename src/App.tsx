@@ -1,14 +1,15 @@
 import { hot } from "react-hot-loader/root";
 import React, { Component } from "react";
 
-import { Title } from "./components/Title";
+import { AccountCard } from "./components/AccountCard/AccountCard";
+import { Page } from "./components/Page/Page.styled";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Title title="Hello world" />
-      </div>
+      <Page>
+        <AccountCard balance={30} />
+      </Page>
     );
   }
 }
