@@ -7,9 +7,19 @@ module.exports = {
       jsx: true, // Allows for the parsing of JSX
     },
   },
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
   extends: [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:prettier/recommended",
   ],
+  rules: {
+    "react/prop-types": "off",
+  },
 };

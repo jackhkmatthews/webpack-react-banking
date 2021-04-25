@@ -1,5 +1,6 @@
 import CopyPlugin from "copy-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import * as path from "path";
 import * as webpack from "webpack";
 import * as devsever from "webpack-dev-server";
@@ -10,16 +11,20 @@ interface Configuration extends webpack.Configuration {
 
 const config: Configuration = {
   mode: "development",
-  entry: "./src/index.ts",
+  entry: "./src/index.tsx",
   module: {
     rules: [
       {
-        test: /\.(tsx|ts)$/,
+        test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env", "@babel/preset-typescript"],
+            presets: [
+              "@babel/preset-env",
+              "@babel/preset-react",
+              "@babel/preset-typescript",
+            ],
           },
         },
       },
@@ -27,6 +32,9 @@ const config: Configuration = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
+    alias: {
+      "react-dom": "@hot-loader/react-dom",
+    },
   },
   devtool: "inline-source-map",
   output: {
