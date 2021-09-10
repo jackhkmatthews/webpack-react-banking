@@ -1,6 +1,6 @@
 # Webpack React Banking
 
-A simple, from scratch, Webpack, React and Typescript project which fetches some dummy transaction data and renders it.
+A simple, from scratch, Webpack, React and Typescript project which fetches some dummy transaction data and renders it
 
 # Local Development
 
